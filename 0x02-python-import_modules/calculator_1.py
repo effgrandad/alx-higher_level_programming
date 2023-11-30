@@ -1,51 +1,51 @@
 #!/usr/bin/python3
-def add(a, b):
+def add(b, d):
     """My addition function
 
     Args:
-        a: first integer
-        b: second integer
+        b: first integer
+        d: second integer
 
     Returns:
-        The return value. a + b
+        The return value. b + d
     """
-    return (a + b)
+    return (b + d)
 
 
-def sub(a, b):
+def sub(b, d):
     """My subtraction function
 
     Args:
-        a: first integer
-        b: second integer
+        b: first integer
+        d: second integer
 
     Returns:
-        The return value. a - b
+        The return value. b - d
     """
-    return (a - b)
+    return (b - d)
 
 
-def mul(a, b):
+def mul(b, d):
     """My multiplication function
 
     Args:
-        a: first integer
-        b: second integer
+        b: first integer
+        d: second integer
 
     Returns:
-        The return value. a * b
+        The return value. b * d
     """
-    return (a * b)
+    return (b * d)
 
 
-def div(a, b):
+def div(b, d):
     """My division function
 
     Args:
-        a: first integer
-        b: second integer
+        b: first integer
+        d: second integer
 
     Returns:
-        The return value. a / b
+        The return value. b / d
     """
-    return int(a / b)
+    return int(b / d)
