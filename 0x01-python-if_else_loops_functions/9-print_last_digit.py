@@ -5,5 +5,5 @@ def print_last_digit(value):
     elif value >= 0:
         last_num = value % 10
     print("{:d}".format(last_num), end="")
-    return last_num
+    return (last_num)
 
