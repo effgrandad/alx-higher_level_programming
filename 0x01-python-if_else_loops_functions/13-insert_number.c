@@ -23,17 +23,17 @@ listint_t *insert_node(listint_t **head, int val)
 	new = malloc(sizeof(listint_t));
 	if (!new)
 		return (NULL);
-	new->m = val;
+	new->n = val;
 	new->next = NULL;
 
-	if (!*head || (*head)->m > val)
+	if (!*head || (*head)->n > val)
 	{
 		new->next = *head;
 		return (*head = new);
 	}
 	else
 	{
-		while (current && current->m < val)
+		while (current && current->n < val)
 		{
 			tmp = current;
 			current = current->next;
