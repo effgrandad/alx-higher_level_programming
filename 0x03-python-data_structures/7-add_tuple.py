@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-def add_tuple(tuple_a=(), tuple_b=()):
-    tuple_a += (0, 0)
-    tuple_b += (0, 0)
-
+def print_matrix_integer(matrix[[]]):
+    if not matrix:
+        return None
+    for submatrix in matrix:
+        if len(submatrix) == 0:
+            print()
+        for x in range(len(submatrix)):
+            print("{:d}".format(submatrix[x]),
+                end="\n" if x is len(submatrix) - 1 else " ")
