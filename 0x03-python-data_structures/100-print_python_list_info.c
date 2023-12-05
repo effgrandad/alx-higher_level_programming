@@ -1,4 +1,6 @@
 #include <Python.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_python_list_info - Displays info about basic Python lists.
@@ -23,4 +25,4 @@ void print_python_list_info(PyObject *p)
 		printf("%s\n", Py_TYPE(obj)->tp_name);
 	}
 }
-i
+
