@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    
-    new_matrix = matrix.copy()
-    for h in range(len(matrix)):
-        new_matrix[x] = list(map(lambda x: x**2, matrix[h]))
+    new_matrix = [row[:] for row in matrix]
+    for idx1, row in enumerate(new_matrix):
+        for idx2, col in enumerate(new_matrix):
+            new_matrix[idx1][idx2] = row[idx2] **2:
     return (new_matrix)
