@@ -5,7 +5,12 @@ import sys
 
 
 def init_board(n):
-    """Initialize an `n`x`n` sized chessboard with 0's."""
+    """Initialize an `n`x`n` sized chessboard with 0's.
+    Args:
+        n: integer to initialize
+
+    Return: list of chessboard
+    """
     board = []
     [board.append([]) for i in range(n)]
     [row.append(' ') for i in range(n) for row in board]
@@ -13,14 +18,25 @@ def init_board(n):
 
 
 def board_deepcopy(board):
-    """Return a deepcopy of a chessboard."""
+    """Creates a deepcopy of a chessboard.
+    Arg:
+        board: chessboard to make copy from.
+
+    Return: a deepcopy of a chessboard.
+    """
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
     return (board)
 
 
 def get_solution(board):
-    """Return the list of lists representation of a solved chessboard."""
+    """Creates the list of lists representation of a solved chessboard.
+
+    Arg:
+        board: list of cheswboard
+
+    Return: list of lists.
+    """
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
@@ -32,10 +48,8 @@ def get_solution(board):
 
 def xout(board, row, col):
     """X out spots on a chessboard.
-
     All spots where non-attacking queens can no
     longer be played are X-ed out.
-
     Args:
         board (list): The current working chessboard.
         row (int): The row where a queen was last played.
@@ -85,7 +99,6 @@ def xout(board, row, col):
 
 def recursive_solve(board, row, queens, solutions):
     """Recursively solve an N-queens puzzle.
-
     Args:
         board (list): The current working chessboard.
         row (int): The current working row.
@@ -113,15 +126,4 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
-    if sys.argv[1].isdigit() is False:
-        print("N must be a number")
-        sys.exit(1)
-    if int(sys.argv[1]) < 4:
-        print("N must be at least 4")
-        sys.exit(1)
-
-    board = init_board(int(sys.argv[1]))
-    solutions = recursive_solve(board, 0, 0, [])
-    for sol in solutions:
-        print(sol)
 
