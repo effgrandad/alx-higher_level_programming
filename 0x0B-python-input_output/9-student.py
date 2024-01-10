@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Defines a class Student."""
+"""Defining a class Student."""
 
 
 class Student:
-    """Represent a student."""
+    """Representation of a student."""
 
     def __init__(self, first_name, last_name, age):
         """Initialize a new Student.
