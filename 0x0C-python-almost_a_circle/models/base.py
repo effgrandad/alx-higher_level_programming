@@ -9,7 +9,7 @@ import turtle
 class Base:
     """Base model.
 
-    In project 0x0C*, this serves as the "base" for all other classes
+    In project 0x0C*, this serves as the "base" for all other classes.
 
     Private Class Attributes:
         __nb_object (int): Number of instantiated Bases.
@@ -31,7 +31,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Provide a list of dicts' JSON serialization back
+        """Provide a list of dicts' JSON serialization back.
 
         Args:
             list_dictionaries (list):  list of dictionaries.
@@ -42,7 +42,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Create a file with the list of objects' JSON serialization
+        """Create a file with the list of objects' JSON serialization.
 
         Args:
             list_objs (list): list of inherited Base instances
@@ -57,7 +57,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Provide a JSON string's deserialization back
+        """Provide a JSON string's deserialization back.
 
         Args:
             json_string (str): A list of Dicts represented as a JSON string.
@@ -104,7 +104,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Create a file containing the list of objects' CSV serialization
+        """Create a file containing the list of objects' CSV serialization.
 
         Args:
             list_objs (list): A list of inherited Base instances.
@@ -124,7 +124,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Provide a list of the classes that were instantiated from a CSV file
+        """Provide a list of the classes that were instantiated from a CSV file.
 
         Reads from `<cls.__name__>.csv`.
 
