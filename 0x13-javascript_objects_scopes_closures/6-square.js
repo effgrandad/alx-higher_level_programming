@@ -9,7 +9,7 @@ class Square extends SquareP {
     for (let f = 0; f < this.height; f++) {
       let a = '';
       for (let g = 0; g < this.width; g++) {
-        a += c;
+        a += z;
       }
       console.log(a);
     }

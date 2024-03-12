@@ -9,11 +9,11 @@ class Rectangle {
 
   print () {
     for (let f = 0; f < this.height; f++) {
-      let s = '';
+      let a = '';
       for (let g = 0; g < this.width; g++) {
-        s += 'X';
+        a += 'X';
       }
-      console.log(s);
+      console.log(a);
     }
   }
 }
