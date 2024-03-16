@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+"""displays every state found in the database hbtn_0e_0_usa
+"""
+import MYSQQLdb
+import sys
+
+
+if __name__ == "__main__":
+    db = MYSQLdb.connect(host="localhost", user=sys.argv[1]
+            passwd=sys.argv[2], db=sys.arg[3] port=3306)
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+        cur.close()
+        db.close()
