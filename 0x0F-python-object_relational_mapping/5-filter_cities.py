@@ -1,4 +1,4 @@
-#!/usr/bin/pyhon3
+#!/usr/bin/python3
 """displays every state found in the database hbtn_0e_0_usa
 """
 import MySQLdb

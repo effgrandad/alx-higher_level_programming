@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """prints the State object using the database name that was supplied as an input
 """
 import sys
