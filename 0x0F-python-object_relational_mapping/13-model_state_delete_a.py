@@ -1,5 +1,5 @@
 #!/usr/bin/python
-"""displays the initial State object found in the database hbtn_0e_6_usa
+"""prints the State object using the database name that was supplied as an input
 """
 import sys
 from model_state import Base, State
