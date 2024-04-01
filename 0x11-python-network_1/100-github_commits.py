@@ -6,9 +6,16 @@ sent in as arguments
 if __name__ == '__main__':
     import requests
     from sys import argv
-    r = requests.get('https://api.github.com/repos/{}/{}/commits'
-                     .format(argv[2], argv[1]))
-    commits = r.json()
-    for commit in commits[:10]:
-        print(commit.get('sha'), end=': ')
-        print(commit.get('commit').get('author').get('name'))
+
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(argv[2], argv[1])
+
+    try:
+        r = get(url)
+        j = r.json()
+        for commit in j[:10]:
+            print('{}: {}'.format(commit.get('sha'),
+                                  commit.get('commit')
+                                  .get('author')
+                                  .get('name')))
+    except IndexError as e:
+        print(e)
