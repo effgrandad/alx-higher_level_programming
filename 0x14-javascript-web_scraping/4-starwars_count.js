@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const request = require("request");
+const request = require('request');
 const url = process.argv[2];
 
 request(url, function (error, response, body) {
@@ -12,7 +12,7 @@ request(url, function (error, response, body) {
     for (const filmIndex in films) {
       const filmChars = films[filmIndex].characters;
       for (const charIndex in filmChars) {
-        if (filmChars[charIndex].includes("18")) {
+        if (filmChars[charIndex].includes('18')) {
           count++;
         }
       }
